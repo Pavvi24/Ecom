@@ -8,7 +8,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  origin: [
+    "http://localhost:3000",
+    "https://ecom-frontend-1s69.onrender.com"
+  ],
   credentials: true
 }));
 app.use(express.json());
